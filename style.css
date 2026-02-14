@@ -330,3 +330,60 @@ body{
   .spacer{ height: 3.5in; } /* mimic title spacing on paper */
   a{ color: #000; text-decoration: none; }
 }
+
+.sec{
+  font-size: 1.35rem;
+  margin: 2.2rem 0 .75rem;
+}
+
+.subsec{
+  font-size: 1.1rem;
+  margin: 1.6rem 0 .5rem;
+}
+
+.para{
+  font-size: 1.0rem;
+  font-style: italic;
+  margin: 1.2rem 0 .35rem;
+}
+
+.itemize{
+  margin: .75rem 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.parameter-box{
+  margin: 1.25rem auto;
+  max-width: 46rem;
+  padding: .75rem;
+  border: 1px solid rgba(0,0,0,.18);
+  background: rgba(255,255,255,.25);
+  border-radius: 12px;
+}
+
+.parameter-box-inner{
+  border-top: 1px solid rgba(0,0,0,.25);
+  border-bottom: 1px solid rgba(0,0,0,.25);
+  padding: .6rem .85rem;
+}
+
+.parameter-box-title{
+  margin: 0 0 .6rem;
+  font-size: .98rem;
+  font-weight: 600;
+}
+
+.figure img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+.figure figcaption{
+  margin-top: .55rem;
+  color: rgba(0,0,0,.75);
+  font-size: .95rem;
+  text-align: justify;
+}
+
