@@ -387,3 +387,59 @@ body{
   text-align: justify;
 }
 
+.paper-top{
+  max-width: var(--maxw);
+  margin: 1.25rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.paper-top-inner{
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.paper-top-brand{
+  display:flex;
+  align-items: baseline;
+  gap:.5rem;
+}
+
+.paper-top-meta{
+  margin-top: .25rem;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.paper-label{
+  font-variant: small-caps;
+  letter-spacing: .08em;
+}
+
+.paper-sep{ opacity: .6; padding: 0 .35rem; }
+
+.paper-title-short{
+  font-style: italic;
+}
+
+.paper-nav{
+  display:flex;
+  align-items:center;
+  gap:.9rem;
+  flex-wrap: wrap;
+}
+
+.paper-nav a{
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.paper-nav a:hover{
+  border-bottom-color: var(--link);
+}
+
+
