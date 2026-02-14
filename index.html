@@ -1,1 +1,333 @@
+/* ---------- Base ---------- */
+:root{
+  --ink: #111;
+  --muted: #444;
+  --rule: rgba(0,0,0,.22);
+  --paper: #fbf7ef;               /* warm paper tone */
+  --paper-edge: rgba(0,0,0,.06);
+  --link: #0b3a6f;
+  --maxw: 860px;
+  --lh: 1.62;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 800px at 20% 10%, rgba(0,0,0,.04), transparent 55%),
+    radial-gradient(900px 700px at 80% 30%, rgba(0,0,0,.035), transparent 60%),
+    linear-gradient(180deg, #f6f2ea, var(--paper));
+  font-family: "STIX Two Text", "Times New Roman", Times, serif;
+  line-height: var(--lh);
+  letter-spacing: .005em;
+}
+
+/* Subtle “paper” frame */
+.page{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2.75rem 1.25rem 4rem;
+  background: rgba(255,255,255,.28);
+  box-shadow: 0 0 0 1px var(--paper-edge), 0 20px 70px rgba(0,0,0,.08);
+  border-radius: 12px;
+  backdrop-filter: blur(1px);
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header{
+  max-width: var(--maxw);
+  margin: 1.25rem auto 0;
+  padding: 0 1.25rem;
+}
+
+.masthead{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand{
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+}
+
+.brand-mark{
+  font-size: 1.15rem;
+  opacity: .85;
+}
+
+.brand-name{
+  font-variant: small-caps;
+  letter-spacing: .06em;
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+.nav{
+  display: flex;
+  gap: .9rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a{
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.nav a:hover{
+  border-bottom-color: var(--link);
+}
+
+.print-btn{
+  font: inherit;
+  padding: .22rem .55rem;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,.55);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.print-btn:hover{ background: rgba(255,255,255,.72); }
+
+.rule{
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: .75rem 0 0;
+}
+
+.rule.subtle{ opacity: .65; }
+
+/* ---------- Accessibility ---------- */
+.skip-link{
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus{
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: .5rem .75rem;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  z-index: 999;
+}
+
+/* ---------- Front matter ---------- */
+.frontmatter{
+  text-align: center;
+  padding-top: .25rem;
+}
+
+.epigraph{
+  margin: 0 auto;
+  max-width: 44rem;
+  font-size: 1.02rem;
+  color: var(--muted);
+}
+
+.spacer{
+  height: 34vh; /* mimics LaTeX vspace*{0.35\textheight} */
+  min-height: 10rem;
+}
+
+.dedication p{
+  margin: .15rem 0;
+  color: var(--muted);
+}
+
+.double-space{ height: 2.25rem; }
+
+.closing-quote{
+  margin: 0 auto 1.5rem;
+  max-width: 36rem;
+  padding: .75rem 1rem;
+  border-left: 2px solid var(--rule);
+  text-align: left;
+  background: rgba(255,255,255,.25);
+}
+
+.quote-attrib{
+  font-variant: small-caps;
+  letter-spacing: .05em;
+  color: var(--muted);
+}
+
+.page-break{
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 2.25rem 0;
+}
+
+/* ---------- Title page ---------- */
+.titlepage{
+  padding-top: .5rem;
+}
+
+.titlepage-heading{
+  text-align: center;
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  letter-spacing: .02em;
+}
+
+.titlepage-box{
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1rem 1.15rem;
+  background: rgba(255,255,255,.32);
+  border: 1px solid var(--paper-edge);
+  border-radius: 12px;
+}
+
+.titlepage-box p{
+  margin: .75rem 0;
+}
+
+.smallcaps{
+  font-variant: small-caps;
+  letter-spacing: .03em;
+}
+
+.leadin{
+  margin-top: 1.1rem;
+  margin-bottom: .35rem;
+}
+
+.assumptions{
+  margin: .35rem 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.signoff{
+  margin-top: 1.25rem;
+  text-align: right;
+}
+
+/* Footnotes */
+.fn-ref a{
+  text-decoration: none;
+  color: var(--link);
+  border-bottom: 1px dotted var(--link);
+}
+.footnotes{
+  max-width: 42rem;
+  margin: .9rem auto 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.footnotes ol{
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.footnotes li{
+  margin: .5rem 0;
+}
+.fn-back{
+  text-decoration: none;
+  margin-left: .35rem;
+  color: var(--link);
+}
+
+/* ---------- Paper ---------- */
+.paper-header{
+  text-align: center;
+  margin-top: .25rem;
+}
+
+.paper-kicker{
+  margin: 0;
+  font-variant: small-caps;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+
+.paper-title{
+  margin: .35rem 0 .75rem;
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+.byline{
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+}
+
+.byline p{ margin: .1rem 0; }
+
+.author{
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.section-title{
+  font-size: 1.05rem;
+  margin: 0 0 .75rem;
+  letter-spacing: .02em;
+}
+
+.abstract{
+  max-width: 46rem;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.abstract p{
+  margin: .85rem 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.equation{
+  margin: 1rem auto;
+  padding: .65rem .75rem;
+  border-top: 1px solid var(--paper-edge);
+  border-bottom: 1px solid var(--paper-edge);
+  background: rgba(255,255,255,.18);
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+/* Footer */
+.paper-footer{
+  margin-top: 2rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.footer-note{ margin: .75rem 0 0; }
+
+/* ---------- Print ---------- */
+@media print{
+  body{
+    background: #fff !important;
+  }
+  .site-header, .print-btn, .nav{
+    display: none !important;
+  }
+  .page{
+    box-shadow: none !important;
+    background: transparent !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+  .spacer{ height: 3.5in; } /* mimic title spacing on paper */
+  a{ color: #000; text-decoration: none; }
+}
 
