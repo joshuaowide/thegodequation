@@ -1,31 +1,99 @@
-<header class="paper-top" role="banner">
-  <div class="paper-top-inner">
-    <div class="paper-top-left">
-      <div class="paper-top-brand">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The God Equation — Full Paper</title>
+  <meta name="description" content="Quantum-Geometric Cyclic Cosmology: A Time-Symmetric Model of Expansion and Renewal — Joshua I. Owide, November 2025." />
+
+  <!-- Classic serif type -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- IMPORTANT: ensure style.css is in the same directory as paper.html -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- MathJax for LaTeX-style math -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],
+      },
+      options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- IMPORTANT: ensure script.js is in the same directory as paper.html -->
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Global site header -->
+  <header class="site-header" role="banner">
+    <div class="masthead">
+      <div class="brand">
         <span class="brand-mark" aria-hidden="true">∴</span>
         <span class="brand-name">thegodequation.org</span>
       </div>
-      <div class="paper-top-meta">
-        <span class="paper-label">Paper</span>
-        <span class="paper-sep" aria-hidden="true">—</span>
-        <span class="paper-title-short">Quantum-Geometric Cyclic Cosmology</span>
-      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#authors-note">Author’s Note</a>
+        <a href="index.html#abstract">Abstract</a>
+        <a href="paper.html" aria-current="page">Full Paper</a>
+        <button class="print-btn" type="button" data-print title="Print / Save as PDF">Print</button>
+      </nav>
     </div>
+    <hr class="rule" />
+  </header>
 
-    <nav class="paper-nav" aria-label="Paper navigation">
-      <a href="index.html#abstract">Abstract</a>
-      <a href="#sec-introduction">Introduction</a>
-      <a href="#sec-framework_overview">Framework</a>
-      <a href="#sec-evolution">Dynamics</a>
-      <a href="#sec-cyclic_symmetry">Cyclicity</a>
-      <a href="#sec-observational_outlook">Observations</a>
-      <a href="#sec-circle_square_gap">Geometry</a>
-      <button class="print-btn" type="button" data-print title="Print / Save as PDF">Print</button>
-    </nav>
-  </div>
+  <main id="main" class="page" role="main">
+    <!-- Paper page header + section navigation -->
+    <header class="paper-top" role="banner">
+      <div class="paper-top-inner">
+        <div class="paper-top-left">
+          <div class="paper-top-brand">
+            <span class="brand-mark" aria-hidden="true">∴</span>
+            <span class="brand-name">thegodequation.org</span>
+          </div>
+          <div class="paper-top-meta">
+            <span class="paper-label">Paper</span>
+            <span class="paper-sep" aria-hidden="true">—</span>
+            <span class="paper-title-short">Quantum-Geometric Cyclic Cosmology</span>
+          </div>
+        </div>
 
-  <hr class="rule" />
-</header>
+        <nav class="paper-nav" aria-label="Paper navigation">
+          <a href="#sec-introduction">Introduction</a>
+          <a href="#sec-number-theory">Number Theory</a>
+          <a href="#sec-framework_overview">Framework</a>
+          <a href="#sec-evolution">Dynamics</a>
+          <a href="#sec-cyclic_symmetry">Cyclicity</a>
+          <a href="#sec-observational_outlook">Observations</a>
+          <a href="#sec-circle_square_gap">Geometry</a>
+          <button class="print-btn" type="button" data-print title="Print / Save as PDF">Print</button>
+        </nav>
+      </div>
+      <hr class="rule subtle" />
+    </header>
+
+    <!-- OPTIONAL: title block at top of paper page -->
+    <article class="paper" aria-label="Paper">
+      <header class="paper-header">
+        <p class="paper-kicker">Quantum-Geometric Cyclic Cosmology</p>
+        <h1 class="paper-title">A Time-Symmetric Model of Expansion and Renewal</h1>
+        <div class="byline">
+          <p class="author">Joshua I. Owide</p>
+          <p class="affil"><em>Independent Researcher</em></p>
+          <p class="date">November 2025</p>
+        </div>
+      </header>
+
 
 
 <!-- =========================
@@ -1694,4 +1762,9 @@
   </section>
 
 </section>
+
+          </article>
+  </main>
+</body>
+</html>
 
