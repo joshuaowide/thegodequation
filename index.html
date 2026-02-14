@@ -1,333 +1,244 @@
-/* ---------- Base ---------- */
-:root{
-  --ink: #111;
-  --muted: #444;
-  --rule: rgba(0,0,0,.22);
-  --paper: #fbf7ef;               /* warm paper tone */
-  --paper-edge: rgba(0,0,0,.06);
-  --link: #0b3a6f;
-  --maxw: 860px;
-  --lh: 1.62;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The God Equation — Quantum-Geometric Cyclic Cosmology</title>
+  <meta name="description" content="Quantum-Geometric Cyclic Cosmology: A Time-Symmetric Model of Expansion and Renewal — Joshua I. Owide (Independent Researcher), November 2025." />
 
-*{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
+  <!-- Classic serif type; system fallback if unavailable -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 
-body{
-  margin: 0;
-  color: var(--ink);
-  background:
-    radial-gradient(1200px 800px at 20% 10%, rgba(0,0,0,.04), transparent 55%),
-    radial-gradient(900px 700px at 80% 30%, rgba(0,0,0,.035), transparent 60%),
-    linear-gradient(180deg, #f6f2ea, var(--paper));
-  font-family: "STIX Two Text", "Times New Roman", Times, serif;
-  line-height: var(--lh);
-  letter-spacing: .005em;
-}
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
 
-/* Subtle “paper” frame */
-.page{
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 2.75rem 1.25rem 4rem;
-  background: rgba(255,255,255,.28);
-  box-shadow: 0 0 0 1px var(--paper-edge), 0 20px 70px rgba(0,0,0,.08);
-  border-radius: 12px;
-  backdrop-filter: blur(1px);
-}
+  <!-- MathJax for LaTeX-style math -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],
+      },
+      options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
-/* ---------- Header / Nav ---------- */
-.site-header{
-  max-width: var(--maxw);
-  margin: 1.25rem auto 0;
-  padding: 0 1.25rem;
-}
+  <script defer src="script.js"></script>
+</head>
 
-.masthead{
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-.brand{
-  display: flex;
-  align-items: baseline;
-  gap: .5rem;
-}
+  <header class="site-header" role="banner">
+    <div class="masthead">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">∴</span>
+        <span class="brand-name">thegodequation.org</span>
+      </div>
 
-.brand-mark{
-  font-size: 1.15rem;
-  opacity: .85;
-}
+      <nav class="nav" aria-label="Primary">
+        <a href="#authors-note">Author’s Note</a>
+        <a href="#paper">Paper</a>
+        <a href="#abstract">Abstract</a>
+        <button class="print-btn" type="button" data-print title="Print / Save as PDF">Print</button>
+      </nav>
+    </div>
+    <hr class="rule" />
+  </header>
 
-.brand-name{
-  font-variant: small-caps;
-  letter-spacing: .06em;
-  font-size: .95rem;
-  color: var(--muted);
-}
+  <main id="main" class="page" role="main">
+    <!-- Epigraph -->
+    <section class="frontmatter" aria-label="Front matter">
+      <p class="epigraph">
+        <em>Between a circle and a square lies the smallest gap geometry allows — and perhaps the deepest one physics has yet to understand.</em>
+      </p>
 
-.nav{
-  display: flex;
-  gap: .9rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
+      <div class="spacer" aria-hidden="true"></div>
 
-.nav a{
-  color: var(--link);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-}
+      <div class="dedication" role="note" aria-label="Dedication">
+        <p><em>Dedicated to François Viète (1540–1603),</em></p>
+        <p><em>whose nested radicals revealed the infinite geometry</em></p>
+        <p><em>between the circle and the square,</em></p>
+        <p><em>and in doing so, hinted at the balance of opposites that underlies all creation.</em></p>
+      </div>
 
-.nav a:hover{
-  border-bottom-color: var(--link);
-}
+      <div class="double-space" aria-hidden="true"></div>
 
-.print-btn{
-  font: inherit;
-  padding: .22rem .55rem;
-  border: 1px solid var(--rule);
-  background: rgba(255,255,255,.55);
-  border-radius: 8px;
-  cursor: pointer;
-}
-.print-btn:hover{ background: rgba(255,255,255,.72); }
+      <blockquote class="closing-quote">
+        <p><em>Time has no beginning or end, there is only an in between.</em></p>
+        <footer><span class="quote-attrib">J Owide</span></footer>
+      </blockquote>
 
-.rule{
-  border: none;
-  border-top: 1px solid var(--rule);
-  margin: .75rem 0 0;
-}
+      <hr class="page-break" />
+    </section>
 
-.rule.subtle{ opacity: .65; }
+    <!-- Title page -->
+    <section id="authors-note" class="titlepage" aria-label="Title page and author note">
+      <h1 class="titlepage-heading">Author’s Note</h1>
 
-/* ---------- Accessibility ---------- */
-.skip-link{
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-.skip-link:focus{
-  left: 1rem;
-  top: 1rem;
-  width: auto;
-  height: auto;
-  padding: .5rem .75rem;
-  background: #fff;
-  border: 1px solid var(--rule);
-  border-radius: 10px;
-  z-index: 999;
-}
+      <div class="titlepage-box">
+        <p>
+          I have spent a lot of time thinking about theoretical physics and philosophy—reading, watching,
+          and reflecting on the nature of existence.
+        </p>
 
-/* ---------- Front matter ---------- */
-.frontmatter{
-  text-align: center;
-  padding-top: .25rem;
-}
+        <p>
+          Over the past few years, I have developed this paper gradually as an independent researcher
+          with an academic background in the medical sciences. Although I am far removed from the world
+          of professional physics, I believe that curiosity, logical discipline, and reductionist reasoning
+          can reveal insights that sometimes lie outside established institutional perspectives.
+        </p>
 
-.epigraph{
-  margin: 0 auto;
-  max-width: 44rem;
-  font-size: 1.02rem;
-  color: var(--muted);
-}
+        <p>
+          In this work I propose a quantum–geometric model of the universe that aims to unify quantum
+          mechanics and gravitation, address the cosmological constant problem, and describe both the
+          origin and cyclic renewal of the cosmos within a single, self-consistent framework.
+        </p>
 
-.spacer{
-  height: 34vh; /* mimics LaTeX vspace*{0.35\textheight} */
-  min-height: 10rem;
-}
+        <p class="smallcaps leadin">My starting assumptions were simple:</p>
 
-.dedication p{
-  margin: .15rem 0;
-  color: var(--muted);
-}
+        <ol class="assumptions">
+          <li>
+            The foundational principles of physics should reflect simplicity, not superfluous complexity.
+          </li>
+          <li>
+            The constants $\sqrt{2}$ and $\pi$ are not mere numerical values but relational invariants encoding
+            the symmetry between wave-like and particle-like domains.
+          </li>
+          <li>
+            Creation can be expressed in three words—<em>equal, opposite, asymmetric</em>: the first two echoing
+            Newton’s third law, and the last resonating with the second law of thermodynamics.
+          </li>
+          <li>
+            A zero-energy universe provides a rational foundation for emergence <em>ex nihilo</em>.
+          </li>
+        </ol>
 
-.double-space{ height: 2.25rem; }
+        <p>
+          From these principles the present model emerged. Although some philosophical interpretations are offered,
+          they are included only insofar as they clarify the physical and mathematical framework.
+        </p>
 
-.closing-quote{
-  margin: 0 auto 1.5rem;
-  max-width: 36rem;
-  padding: .75rem 1rem;
-  border-left: 2px solid var(--rule);
-  text-align: left;
-  background: rgba(255,255,255,.25);
-}
+        <p>
+          Finally, I acknowledge that the model’s development and formal integration with the Friedmann equations
+          was, somewhat pertinently, assisted by artificial intelligence.<sup class="fn-ref"><a href="#fn-ai" id="fnref-ai">1</a></sup>
+        </p>
 
-.quote-attrib{
-  font-variant: small-caps;
-  letter-spacing: .05em;
-  color: var(--muted);
-}
+        <p class="signoff"><em>Godspeed.</em></p>
+      </div>
 
-.page-break{
-  border: none;
-  border-top: 1px solid var(--rule);
-  margin: 2.25rem 0;
-}
+      <aside class="footnotes" aria-label="Footnotes">
+        <ol>
+          <li id="fn-ai">
+            <span class="fn-label">1.</span>
+            “Assisted” here means iterative checking, symbolic manipulation, and clarity editing—never a substitute for
+            accountable authorship.
+            <a class="fn-back" href="#fnref-ai" aria-label="Back to reference">↩</a>
+          </li>
+        </ol>
+      </aside>
 
-/* ---------- Title page ---------- */
-.titlepage{
-  padding-top: .5rem;
-}
+      <hr class="page-break" />
+    </section>
 
-.titlepage-heading{
-  text-align: center;
-  font-size: 1.35rem;
-  margin: 0 0 1rem;
-  letter-spacing: .02em;
-}
+    <!-- Paper header -->
+    <article id="paper" class="paper" aria-label="Paper">
+      <header class="paper-header">
+        <p class="paper-kicker">Quantum-Geometric Cyclic Cosmology</p>
+        <h2 class="paper-title">A Time-Symmetric Model of Expansion and Renewal</h2>
 
-.titlepage-box{
-  max-width: 42rem;
-  margin: 0 auto;
-  padding: 1rem 1.15rem;
-  background: rgba(255,255,255,.32);
-  border: 1px solid var(--paper-edge);
-  border-radius: 12px;
-}
+        <div class="byline">
+          <p class="author">Joshua I. Owide</p>
+          <p class="affil"><em>Independent Researcher</em></p>
+          <p class="date">November 2025</p>
+        </div>
+      </header>
 
-.titlepage-box p{
-  margin: .75rem 0;
-}
+      <section id="abstract" class="abstract" aria-label="Abstract">
+        <h3 class="section-title">Abstract</h3>
 
-.smallcaps{
-  font-variant: small-caps;
-  letter-spacing: .03em;
-}
+        <p>
+          We develop a quantum–geometric cosmology in which two time-reversed semiclassical branches form a globally neutral
+          (net-zero) energy bookkeeping, while each branch supports a locally time-directed history. The onset of classical
+          description is identified with an <em>emergence/partition event</em> at $t=0$, where a cube–circle construction supplies
+          branch-normalized sector weights $\bigl(\Omega_b,\Omega_{\rm dm}(0),\Omega_{\rm de}(0)\bigr)$ from simple $\pi$- and
+          $\sqrt{2}$-based geometric ratios. An irreducible circle–square deficit
+        </p>
 
-.leadin{
-  margin-top: 1.1rem;
-  margin-bottom: .35rem;
-}
+        <div class="equation" role="math" aria-label="alpha definition">
+          \[
+            \alpha \equiv 1-\frac{\pi}{4},
+          \]
+        </div>
 
-.assumptions{
-  margin: .35rem 0 1rem;
-  padding-left: 1.25rem;
-}
+        <p>
+          acts as the intrinsic asymmetry seed that fixes boundary data at emergence; its rescalings (e.g.\
+          $2-\pi/2=2\alpha$) arise whenever the construct aggregates multiple quadrant deficits and do not introduce additional
+          independent parameters.
+        </p>
 
-.signoff{
-  margin-top: 1.25rem;
-  text-align: right;
-}
+        <p>
+          Post-emergence evolution is modeled as a bounded redistribution <em>within</em> the dark sector at fixed baryon weight.
+          Writing $S\equiv\Omega_{\rm dm}+\Omega_{\rm de}=1-\Omega_b$ and defining the dark-matter share
+        </p>
 
-/* Footnotes */
-.fn-ref a{
-  text-decoration: none;
-  color: var(--link);
-  border-bottom: 1px dotted var(--link);
-}
-.footnotes{
-  max-width: 42rem;
-  margin: .9rem auto 0;
-  color: var(--muted);
-  font-size: .95rem;
-}
-.footnotes ol{
-  margin: 0;
-  padding-left: 1.25rem;
-}
-.footnotes li{
-  margin: .5rem 0;
-}
-.fn-back{
-  text-decoration: none;
-  margin-left: .35rem;
-  color: var(--link);
-}
+        <div class="equation" role="math" aria-label="f(t) definition">
+          \[
+            f(t)\equiv\frac{\Omega_{\rm dm}(t)}{S}
+            =\frac{\rho_{\rm dm}}{\rho_{\rm dm}+\rho_{\rm de}}\in[0,1],
+          \]
+        </div>
 
-/* ---------- Paper ---------- */
-.paper-header{
-  text-align: center;
-  margin-top: .25rem;
-}
+        <p>
+          we impose a logistic composition history $f(t)=\bigl(1+e^{-\kappa(t-\gamma)}\bigr)^{-1}$. By construction the
+          inflection time is <em>dark-sector equality</em>, $f(\gamma)=\tfrac12\iff \rho_{\rm dm}(\gamma)=\rho_{\rm de}(\gamma)$,
+          while the conversion window is anchored by the emergence share $f(0)$ and one present-day point $f(t_0)$, fixing
+          $(\kappa,\gamma)$. A finite epoch may be defined either by mirror closure $L\equiv 2\gamma$ (exchanging the initial
+          dark weights across the endpoint) or, more generally, by an operational exhaustion threshold
+          $f(L_{\varepsilon})=1-\varepsilon$; the mirror-closed realization corresponds to the special choice $\varepsilon=f(0)$.
+        </p>
 
-.paper-kicker{
-  margin: 0;
-  font-variant: small-caps;
-  letter-spacing: .08em;
-  color: var(--muted);
-}
+        <p>
+          The logistic postulate is embedded covariantly as an interacting dark sector,
+        </p>
 
-.paper-title{
-  margin: .35rem 0 .75rem;
-  font-size: 1.6rem;
-  line-height: 1.25;
-}
+        <div class="equation" role="math" aria-label="covariant exchange equations">
+          \[
+            \dot\rho_{\rm dm}+3H\rho_{\rm dm}=+Q,\qquad
+            \dot\rho_{\rm de}=-Q,
+          \]
+        </div>
 
-.byline{
-  margin: 0 0 1.5rem;
-  color: var(--muted);
-}
+        <p>
+          with $Q(t)$ fixed (not freely chosen) by covariant conservation together with the imposed $f(t)$, yielding in the
+          vacuum-like limit $w_{\rm de}=-1$ the induced exchange $Q=\rho_D f(1-f)(\kappa+3H)$. The model is $\Lambda$-free at the
+          level of fundamental inputs: $\Lambda$CDM behavior is recovered only as a late-time approximation when exchange is
+          suppressed away from the conversion window. We also show that the logistic kernel arises as the overdamped limit of
+          a minimal variational relaxation model with a cubic potential, providing a Ginzburg–Landau-type origin for bounded
+          geometric repartitioning.
+        </p>
 
-.byline p{ margin: .1rem 0; }
+        <p>
+          Viète-inspired finite-residual structure supplies a secondary geometric remnant through the bidirectional factor
+          $\beta_{\mathrm V}=9\sqrt{2}/(4\pi)$, whose deviation $\varepsilon_{\mathrm V}=\beta_{\mathrm V}-1\sim 10^{-2}$ can be
+          interpreted as a small curvature bias available to seed baryonic selection; after microphysical processing and
+          entropy dilution it can plausibly project to $\eta_B\sim 10^{-10}$. Observationally, the framework predicts correlated,
+          falsifiable signatures characteristic of interacting dark energy: localized departures from $\Lambda$CDM-like expansion
+          and growth (e.g. in $H(z)$, $f\sigma_8$, and ISW cross-correlations) peaking near the equality window, with additional
+          tensor/correlation imprints possible in model-dependent cyclic renewal extensions.
+        </p>
+      </section>
 
-.author{
-  font-size: 1.05rem;
-  color: var(--ink);
-}
-
-.section-title{
-  font-size: 1.05rem;
-  margin: 0 0 .75rem;
-  letter-spacing: .02em;
-}
-
-.abstract{
-  max-width: 46rem;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.abstract p{
-  margin: .85rem 0;
-  text-align: justify;
-  hyphens: auto;
-}
-
-.equation{
-  margin: 1rem auto;
-  padding: .65rem .75rem;
-  border-top: 1px solid var(--paper-edge);
-  border-bottom: 1px solid var(--paper-edge);
-  background: rgba(255,255,255,.18);
-  border-radius: 10px;
-  overflow-x: auto;
-}
-
-/* Footer */
-.paper-footer{
-  margin-top: 2rem;
-  text-align: center;
-  color: var(--muted);
-  font-size: .95rem;
-}
-
-.footer-note{ margin: .75rem 0 0; }
-
-/* ---------- Print ---------- */
-@media print{
-  body{
-    background: #fff !important;
-  }
-  .site-header, .print-btn, .nav{
-    display: none !important;
-  }
-  .page{
-    box-shadow: none !important;
-    background: transparent !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-  }
-  .spacer{ height: 3.5in; } /* mimic title spacing on paper */
-  a{ color: #000; text-decoration: none; }
-}
-
+      <footer class="paper-footer" aria-label="Footer">
+        <hr class="rule subtle" />
+        <p class="footer-note">
+          © <span data-year></span> thegodequation.org — Presented in a classical “paper” layout for readability.
+        </p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
