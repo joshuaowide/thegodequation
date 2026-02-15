@@ -1627,7 +1627,491 @@
 
   </section>
 
+<section class="paper-section" id="einstein-conservation">
+  <h2>Einstein Embedding and the Logistic Dark-Sector Law</h2>
+
+  <p>
+    To embed the branch-level bookkeeping into General Relativity, we work with physical energy densities
+    \(\rho_i(t)\) and the Einstein field equations without introducing a bare cosmological constant. Vacuum-like
+    contributions are carried instead by an effective dark-energy component within the dark sector:
+  </p>
+
+  <div class="equation" id="eq:EFE_total">
+    \[
+      G_{\mu\nu} = 8\pi G \, T_{\mu\nu}^{\rm (tot)},
+      \qquad
+      T_{\mu\nu}^{\rm (tot)} = T_{\mu\nu}^{(b)} + T_{\mu\nu}^{(\rm dm)} + T_{\mu\nu}^{(\rm de)} .
+    \]
+  </div>
+
+  <p>
+    Covariant conservation follows from the contracted Bianchi identity, \(\nabla^\mu G_{\mu\nu}=0\), implying
+    \(\nabla^\mu T_{\mu\nu}^{\rm (tot)}=0\). We allow <em>internal</em> redistribution within the dark sector while
+    preserving total conservation by introducing an exchange four-vector \(Q_\nu\):
+  </p>
+
+  <div class="equation" id="eq:Qnu_split">
+    \[
+      \nabla^\mu T_{\mu\nu}^{(\rm dm)} = +Q_\nu,
+      \qquad
+      \nabla^\mu T_{\mu\nu}^{(\rm de)} = -Q_\nu,
+      \qquad
+      \nabla^\mu T_{\mu\nu}^{(b)} = 0.
+    \]
+  </div>
+
+  <p>
+    In an FRW background one may take \(Q_\nu=(Q,0,0,0)\), with the sign convention \(Q&gt;0\) describing net transfer
+    from the vacuum-like component (“de”) to the dust-like component (“dm”) along the branch under consideration.
+    We take
+    \(w_b=0\), \(w_{\rm dm}=0\), and \(w_{\rm de}\simeq -1\) (vacuum-like locally, but not necessarily constant in time).
+  </p>
+
+  <div class="equation" id="eq:continuity_interacting">
+    \[
+      \dot\rho_{\rm dm}+3H\rho_{\rm dm}=+Q,
+      \qquad
+      \dot\rho_{\rm de}+3H(1+w_{\rm de})\rho_{\rm de}=-Q,
+      \qquad
+      \dot\rho_{b}+3H\rho_{b}=0,
+      \qquad
+      H\equiv \frac{\dot a}{a}.
+    \]
+  </div>
+
+  <h3>Logistic composition as the GR closure</h3>
+
+  <p>
+    The model postulate is applied to the <em>composition</em> of the dark sector. Define the total dark density
+    \(\rho_D\equiv\rho_{\rm dm}+\rho_{\rm de}\) and the dark-matter share
+  </p>
+
+  <div class="equation" id="eq:f_rho_def">
+    \[
+      f(t)\equiv \frac{\rho_{\rm dm}}{\rho_D}\in[0,1],
+      \qquad
+      \rho_{\rm dm}=f\rho_D,
+      \qquad
+      \rho_{\rm de}=(1-f)\rho_D.
+    \]
+  </div>
+
+  <p>
+    The prescribed history for the share is logistic on a branch:
+  </p>
+
+  <div class="equation" id="eq:f_logistic_EFE">
+    \[
+      f(t)=\frac{1}{1+\exp\!\big(-\kappa[t-\gamma]\big)},
+      \qquad
+      \dot f = \kappa\,f(1-f).
+    \]
+  </div>
+
+  <p>
+    By construction, the midpoint \(\gamma\) is the epoch of <em>dark-sector equality</em>:
+  </p>
+
+  <div class="equation" id="eq:equality_mid_EFE">
+    \[
+      f(\gamma)=\tfrac12
+      \quad\Longleftrightarrow\quad
+      \rho_{\rm dm}(\gamma)=\rho_{\rm de}(\gamma).
+    \]
+  </div>
+
+  <p>
+    Imposing the logistic share simultaneously with covariant conservation fixes the interaction \(Q(t)\) —
+    it is not an additional degree of freedom. For a vacuum-like component \(w_{\rm de}=-1\), the induced exchange
+    takes a compact closed form:
+  </p>
+
+  <div class="equation" id="eq:Q_final">
+    \[
+      Q(t)=\dot\rho_{\rm dm}+3H\rho_{\rm dm}
+      =\rho_D\,f(1-f)\,\big(\kappa+3H\big).
+    \]
+  </div>
+
+  <p>
+    The kernel \(f(1-f)\) makes the transfer self-limiting (suppressed near \(f\simeq 0\) and \(f\simeq 1\)) and
+    uniquely maximized at equality \(f=\tfrac12\). On the dual (time-reflected) branch the direction of exchange
+    reverses under \(t\mapsto L-t\), preserving the global time symmetry of the cycle.
+  </p>
+
+  <h3>Friedmann system (single branch)</h3>
+
+  <p>
+    The background evolution is governed by the Friedmann equations with \(\rho_{\rm de}\) treated as vacuum-like locally
+    but dynamically evolving via exchange:
+  </p>
+
+  <div class="equation" id="eq:Friedmann_system">
+    \[
+      H^2 = \frac{8\pi G}{3}\big(\rho_b+\rho_{\rm dm}+\rho_{\rm de}\big) -\frac{\mathcal{K}}{a^2},
+      \qquad
+      \dot H = -4\pi G\big(\rho_{\rm tot}+p_{\rm tot}\big)+\frac{\mathcal{K}}{a^2},
+      \quad
+      \rho_{\rm tot}\equiv\rho_b+\rho_{\rm dm}+\rho_{\rm de}.
+    \]
+  </div>
+
+  <p>
+    For \(\mathcal{K}=0\) with dust baryons and dust dark matter (\(p_b=p_{\rm dm}=0\)) and \(w_{\rm de}=-1\), the
+    Raychaudhuri equation reduces to
+  </p>
+
+  <div class="equation" id="eq:Hdot_dust_new">
+    \[
+      \dot{H} = -4\pi G\,(\rho_b+\rho_{\rm dm}),
+    \]
+  </div>
+
+  <p>
+    with the system closed by the interacting continuity equations together with the logistic share \(f(t)\) and the
+    induced exchange \(Q(t)\) above. In this way, the framework is \(\Lambda\)-free at the level of fundamental inputs:
+    the vacuum-like density is not prescribed as a constant, but generated dynamically from \(\rho_D(t)\) and the
+    conversion history \(f(t)\).
+  </p>
 </section>
+
+    <section class="paper-section" id="discussion-outlook">
+  <h2>Discussion and Outlook</h2>
+
+  <p>
+    The framework developed here ties quantum–geometric structure, cosmological background dynamics, and
+    thermodynamic self–regulation into a single closed effective description. The central move is to treat
+    “decoherence” as an <em>internal</em> geometric repartitioning between two complementary curvature manifestations,
+    rather than as an external environmental process. This repartitioning is seeded at emergence by a finite,
+    scale–free geometric asymmetry and is subsequently organized by a bounded logistic <em>composition</em> law for
+    the dark sector. The midpoint of the logistic is fixed <em>by definition</em> as dark–sector equality, and the end
+    of the epoch is fixed operationally by a dark–energy exhaustion threshold. A time–symmetric completion is
+    implemented through a two–branch pairing that enforces global neutrality while allowing each individual branch
+    to remain monotonic and observationally causal.
+  </p>
+
+  <p>
+    A key conceptual consequence is that no fundamental cosmological constant is introduced. Instead, the
+    vacuum–like component is an exchange–driven reservoir within the dark sector: it is locally vacuum–like in its
+    stress tensor (\(w_{\rm de}=-1\)), but it is not separately conserved and therefore need not be constant in time.
+  </p>
+
+  <h3>Emergent Arrow of Time and Two–Branch Thermodynamics</h3>
+
+  <p>
+    Along a single semiclassical expansion branch, entropy production is monotonic and tracks the direction of
+    decoherence: vacuum–like support is converted into localized gravitating curvature modes. In a formally
+    time–symmetric completion, the conjugate branch can be interpreted as carrying the reverse thermodynamic arrow
+    during renewal (re–coherence), so that the composite two–branch state remains globally unitary and (in an
+    appropriate coarse–grained sense) entropy–neutral even though each branch individually exhibits an emergent
+    arrow of time.
+  </p>
+
+  <p>
+    In this view the arrow of time is not imposed as an additional boundary condition. It is the branch–restricted
+    manifestation of decoherence within a globally time–symmetric construction.
+  </p>
+
+  <h3>Vacuum–Matter Duality and the Induced Exchange Mechanism</h3>
+
+  <p>
+    Vacuum–matter duality is implemented covariantly through an interacting dark sector, not through a prescribed
+    \(\Lambda(t)\). The vacuum–like component remains locally vacuum–like (\(w_{\rm de}=-1\)) but is not separately
+    conserved:
+  </p>
+
+  <div class="equation" id="eq:discussion_continuity">
+    \[
+      \dot\rho_{\rm dm}+3H\rho_{\rm dm}=+Q,
+      \qquad
+      \dot\rho_{\rm de}=-Q,
+      \qquad
+      \dot\rho_b+3H\rho_b=0.
+    \]
+  </div>
+
+  <p>
+    The logistic coordinate is the dark–sector share
+  </p>
+
+  <div class="equation" id="eq:discussion_logistic">
+    \[
+      f(t)\equiv\frac{\rho_{\rm dm}}{\rho_{\rm dm}+\rho_{\rm de}}
+      =\frac{1}{1+e^{-\kappa(t-\gamma)}},
+      \qquad
+      \dot f=\kappa f(1-f).
+    \]
+  </div>
+
+  <p>
+    Because the kernel \(f(1-f)\) is bounded and self–limiting, exchange is suppressed near the endpoints
+    (\(f\to 0\) and \(f\to 1\)) and peaks uniquely at equality \(f=\tfrac12\). Requiring covariant conservation
+    together with the prescribed composition history fixes the exchange:
+  </p>
+
+  <div class="equation" id="eq:discussion_Q">
+    \[
+      Q(t)=\rho_D\,f(1-f)\,\bigl(\kappa+3H\bigr),
+      \qquad
+      \rho_D\equiv \rho_{\rm dm}+\rho_{\rm de}.
+    \]
+  </div>
+
+  <p>
+    Thus the interaction is not an extra phenomenological function: it is the GR closure required to realize the
+    imposed logistic composition on a single branch.
+  </p>
+
+  <h3>Emergence at \(t=0\) and the Seeded Initial Partition</h3>
+
+  <p>
+    In the revised narrative, the Big Bang is treated as an emergence event at \(t=0\) at which a branch–normalized
+    sector decomposition becomes meaningful. The intrinsic geometric seed is taken to be the circle–square gap
+  </p>
+
+  <div class="equation" id="eq:discussion_alpha">
+    \[
+      \alpha \equiv 1-\frac{\pi}{4},
+    \]
+  </div>
+
+  <p>
+    a finite, dimensionless residual that renders perfect coherence metastable and fixes the initial partition at
+    emergence. The steep portion of the logistic evolution may then be read as the onset of the first classical
+    expansion era after emergence, rather than as evolution emanating from a singular initial condition.
+  </p>
+
+  <h3>The Cosmological Constant Problem in an Effective Sense</h3>
+
+  <p>
+    The framework addresses the cosmological constant problem only in an <em>effective</em> sense: late–time
+    vacuum–like support is not introduced as a rigid fundamental parameter, but is interpreted as the surviving
+    coherent fraction of the geometric vacuum within a bounded conversion capacity. Crucially, the observed
+    proximity of dark matter and dark energy today is not enforced by tuning an arbitrary coincidence time.
+    Instead, the model selects a distinguished epoch <em>by definition</em>,
+  </p>
+
+  <div class="equation" id="eq:discussion_equality">
+    \[
+      f(\gamma)=\tfrac12 \;\Longleftrightarrow\; \rho_{\rm dm}(\gamma)=\rho_{\rm de}(\gamma),
+    \]
+  </div>
+
+  <p>
+    and it defines a finite completion time on each branch <em>by threshold</em>:
+  </p>
+
+  <div class="equation" id="eq:discussion_exhaustion">
+    \[
+      f(L)=1-\varepsilon
+      \qquad\Longleftrightarrow\qquad
+      \rho_{\rm de}(L)=\varepsilon\,\rho_D(L).
+    \]
+  </div>
+
+  <p>
+    In this way the existence of a preferred equality midpoint and a finite conversion window is tied to internal
+    structure (the composition postulate plus seeded boundary data) rather than to external boundary prescriptions.
+    Whether this also explains the observed smallness of the present vacuum–like density in absolute units depends
+    on the microscopic origin of the conversion capacity and remains part of the open derivation problem.
+  </p>
+
+  <h3>Renewal, Re–coherence, and Cyclic Completion</h3>
+
+  <p>
+    Beyond equality, a time–symmetric completion may be interpreted as a renewal phase in which the direction of
+    exchange reverses (\(Q\to -Q\)), corresponding to a re–coherence of localized curvature back into vacuum–like
+    support. In this interpretation, a classical “Big Crunch” is replaced by non–singular geometric realignment:
+    localization is regulated by the bounded kernel \(f(1-f)\), preventing runaway divergences in the exchange
+    channel and enabling smooth cycle completion without information loss at the level of the global two–branch
+    state.
+  </p>
+
+  <h3>Geometric Asymmetry and Baryogenesis</h3>
+
+  <p>
+    The percent–level curvature offset \(\varepsilon_{\mathrm V}\sim 10^{-2}\) encodes the first nontrivial residual
+    of the bidirectional Viète–type construction. While globally self–canceling across time–reversed branches, this
+    residual acts as a geometric bias which, after microphysical processing (CP violation, out–of–equilibrium
+    dynamics, washout, and entropy dilution), can map onto the observed baryon asymmetry. In this reading, matter
+    dominance is not imposed by ad hoc symmetry breaking, but is inherited from a finite geometric imperfection in
+    the recursive structure itself, with the conjugate branch carrying the oppositely signed local bias so that
+    global time symmetry and the zero–energy condition remain intact.
+  </p>
+
+  <h3>Cyclic Recursion, Invariants, and “Cosmic Memory”</h3>
+
+  <p>
+    Each completed conversion period defines a unit of recursive time. In a renewal extension, sign reversal of the
+    exchange restores balance at cycle completion, while boundedness of the conversion window permits certain
+    geometric invariants (or conserved spectral features) to persist across renewal. This offers a natural setting
+    in which statistical “memory” of prior states could survive without invoking multiverse ensembles, although a
+    quantitative implementation of such memory effects remains open in the present formulation.
+  </p>
+
+  <h3>Hilbert–Space Interpretation and Residual Coupling</h3>
+
+  <p>
+    The two–branch structure admits a Hilbert–space interpretation in which expanding and renewing sectors form an
+    entangled pair. Decoherence corresponds to the suppression of phase coherence between these sectors, yielding an
+    emergent classical spacetime experienced within a single branch. In this language, gravity may be interpreted
+    as an effective manifestation of weak residual coupling between entangled but decohered geometric sectors,
+    providing a conceptual bridge between cosmological expansion, quantum measurement, and persistent vacuum–like
+    support.
+  </p>
+
+  <h3>Observational Prospects</h3>
+
+  <p>
+    The most direct empirical tests are those associated with interacting dark energy: small, time–dependent
+    departures from \(\Lambda\)CDM–<em>like</em> behavior in \(H(z)\) and in growth observables (e.g.\ \(f\sigma_8\)),
+    together with correlated changes in the late–time ISW signal. These signatures are localized by construction:
+    they are maximized near the equality epoch because the conversion kernel peaks at \(f=\tfrac12\), and they are
+    suppressed toward emergence and toward exhaustion where \(f(1-f)\to 0\).
+  </p>
+
+  <p>
+    A practical observational interface is provided by the dimensionless IDE coupling
+    \(\beta_{\rm IDE}\equiv Q/(3H\rho_{\rm de})\) together with a bounded exchange diagnostic
+    \(\Xi_D\equiv Q/(3H\rho_D)\). In this framework, both inherit a fixed functional template once
+    \((\kappa,\gamma)\) and the background history \(H(t)\) are specified, so that constraints from
+    SNe/BAO/CMB anchoring, clustering/lensing, and ISW cross–correlations become mutually constraining rather than
+    independently parameterizable. In cyclic extensions, renewal dynamics may also leave imprints in tensor and
+    correlation sectors; however, mapping such features into directly detectable gravitational–wave bands is model
+    dependent and is best treated as an indirect consistency test absent a specified transfer mechanism.
+  </p>
+
+  <h3>Entropy Production in the Interacting Formulation</h3>
+
+  <p>
+    Let \(S_m\equiv s\,a^3\) denote comoving matter entropy with matter temperature \(T_m\).
+    If the exchange into the dust–like sector thermalizes efficiently, one may identify a comoving heat input
+    \(dQ_{\rm heat}=a^3 Q\,dt\) into the matter sector, giving the entropy production rate
+  </p>
+
+  <div class="equation" id="eq:Sm_dot">
+    \[
+      \dot S_m = \frac{1}{T_m}\,a^3\,Q(t).
+    \]
+  </div>
+
+  <p>
+    This is positive when \(Q&gt;0\) on the decohering (conversion) branch and negative when \(Q&lt;0\) on the
+    recohering (renewal) branch. Global two–branch unitarity then motivates an entropy–neutral bookkeeping for the
+    composite state even though each branch carries a definite thermodynamic arrow. The detailed sign and magnitude
+    of \(\dot S_m\) in a realistic early universe depends on microphysical thermalization and should be regarded as
+    a phenomenological diagnostic rather than a derived identity.
+  </p>
+
+  <p>
+    An equivalent effective–fluid description can also be given in terms of particle creation or bulk viscosity by
+    defining an effective creation rate
+    \(\Gamma \equiv Q/(\rho_{\rm dm}+p_{\rm dm})\)
+    and bulk pressure
+    \(\Pi = -(\rho_{\rm dm}+p_{\rm dm})\,\Gamma/(3H)\),
+    which reproduces the same background exchange dynamics while providing a familiar macroscopic interpretation.
+  </p>
+
+  <h3>Relation to Existing Frameworks</h3>
+
+  <p>
+    The construction differs from scalar–tensor and conventional cyclic models while remaining compatible with
+    their empirical constraints. In scalar–tensor theories (e.g.\ Brans–Dicke) the gravitational coupling becomes
+    dynamical and is tightly bounded by BBN/CMB and local tests. Here the logistic variable is a dimensionless
+    <em>composition</em> coordinate and the Einstein–Hilbert coupling is held fixed; any effective \(G_{\rm eff}\)
+    variation arises only in optional nonminimal extensions and can be chosen to remain within standard limits.
+  </p>
+
+  <p>
+    Relative to the broader interacting dark energy literature, the distinguishing feature is that the coupling is
+    not postulated as an arbitrary function of \((H,\rho_i)\); it is induced by the requirement that a bounded
+    logistic composition history hold while total stress–energy remains covariantly conserved. Relative to running–
+    vacuum or \(\Lambda(t)\) ansätze, the framework replaces a prescribed vacuum evolution with an internal exchange
+    closure tied to a bounded kernel and to a finite exhaustion endpoint.
+  </p>
+
+  <p>
+    Conceptually, the framework shares the cyclic intuition of conformal and ekpyrotic scenarios, but cyclicity here
+    is realized through a bounded conversion window between decoherence and re–coherence rather than through
+    conformal matching, brane collision, or a required singularity. The interacting dark sector provides a concrete
+    mechanism for vacuum–matter balance and yields testable low–redshift signatures localized near equality.
+  </p>
+
+  <h3>Outlook</h3>
+
+  <ol class="paper-list">
+    <li>
+      derive the logistic composition law (or equivalently the induced exchange \(Q\)) from a microscopic path–integral
+      or operator–expectation formulation of the underlying quantum geometry, rather than imposing it as an effective
+      postulate;
+    </li>
+    <li>
+      build a complete perturbation theory (including the momentum–transfer prescription) to obtain robust predictions
+      for growth, lensing, and ISW observables in the presence of the exchange kernel;
+    </li>
+    <li>
+      test whether the curvature residual \(\varepsilon_{\mathrm V}\) can emerge dynamically (e.g.\ through quantum–geometric
+      renormalization, spectral flow, or coarse–graining) rather than being treated as a structural input;
+    </li>
+    <li>
+      simulate full renewal cycles to assess the persistence (or erasure) of statistical “memory” across epochs and to
+      quantify when renewal is dynamically realized rather than merely a formal time–reversal completion;
+    </li>
+    <li>
+      explore implications for black–hole evaporation and horizon information flow in a two–branch setting, including
+      the fate of cross–branch correlations under strong curvature.
+    </li>
+  </ol>
+
+  <p>
+    Taken together, these steps would convert the present framework from a coherent effective description into a
+    derived quantum–geometric cosmology with sharpened, falsifiable predictions connecting the quantum and cosmic
+    domains.
+  </p>
+
+  <h2 class="section-heading-tight">Concluding Remarks</h2>
+
+  <p>
+    The quantum–geometric cyclic framework developed here organizes curvature, coherence, and cosmological evolution
+    around a single structural principle: a globally symmetric completion can coexist with locally consequential
+    residual asymmetry, and a <em>bounded</em> exchange between vacuum–like coherence and localized curvature can define
+    a finite cosmological epoch without imposing singular boundary behavior. In the effective description,
+    “decoherence” is not an external environmental input but an internal repartitioning within the dark sector,
+    tracked by a branch–normalized composition variable
+    \(f(t)=\rho_{\rm dm}/(\rho_{\rm dm}+\rho_{\rm de})\)
+    whose evolution is postulated to be logistic. This choice fixes the midpoint <em>by definition</em> as dark–sector
+    equality and fixes the epoch endpoint <em>operationally</em> by a dark–energy exhaustion threshold.
+  </p>
+
+  <p>
+    A central modelling consequence is that no fundamental cosmological constant is introduced. The vacuum–like
+    component is locally characterized by \(w_{\rm de}=-1\), yet it is not separately conserved: its density runs
+    through the induced exchange required by covariant conservation and the prescribed composition history. In this
+    sense, \(\Lambda\)CDM appears only as an approximate late–time phenomenology in regimes where exchange is
+    suppressed, rather than as an assumed starting point.
+  </p>
+
+  <p>
+    The most direct falsifiable signatures are therefore those of a controlled interacting dark sector: localized
+    departures from \(\Lambda\)CDM–like behavior in \(H(z)\) and in growth observables (e.g.\ \(f\sigma_8\)), together
+    with correlated late–time potential evolution (ISW and lensing consistency tests). These signatures are localized
+    by construction: they are largest near the equality window where the exchange kernel is maximized and are
+    suppressed toward emergence and toward exhaustion where \(f(1-f)\to 0\). In the time–symmetric cyclic extension,
+    renewal corresponds to reversal of the exchange direction (\(Q\to -Q\)) across the conjugate branch; additional
+    tensor or correlation imprints are possible, but mapping them into directly detectable gravitational–wave bands
+    remains model dependent and is best treated as an indirect consistency target absent a specified transfer
+    mechanism.
+  </p>
+
+  <p>
+    Regardless of empirical outcome, the construction demonstrates how geometric residuals (e.g.\ \(\alpha=1-\pi/4\)
+    and the bidirectional Viète remnant \(\varepsilon_{\mathrm V}\)) can be used to articulate a unified narrative
+    linking emergence, the persistence of vacuum–like support, structure formation, and (with microphysical
+    processing) baryogenesis, while preserving covariant conservation on each branch and global neutrality in the
+    paired completion.
+  </p>
+</section>
+
 
           </article>
   </main>
