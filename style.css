@@ -435,13 +435,13 @@ body{
 }
 
 .qgf-figure {
-  max-width: 800px;   /* Optional: controls overall figure size */
+  max-width: 400px;   /* Optional: controls overall figure size */
   margin: 0 auto;     /* Centers the figure */
 }
 
 .qgf-figure img {
-  width: 100%;
-  max-width: 100%;
+  width: 50%;
+  max-width: 50%;
   height: auto;
   display: block;
 }
