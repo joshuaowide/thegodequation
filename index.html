@@ -40,16 +40,13 @@
       </div>
 
       <nav class="nav" aria-label="Primary">
-
-  <a href="index.html">Home</a>
-  <a href="postulates.html">Postulates</a>
-  <a href="number-theory.html">Number Theory</a>
-  <a href="abstract.html">Abstract</a>
-  <a href="paper.html">Full Paper</a>
-  <a href="authors-note.html">Author’s Note</a>
-
-</nav>
-
+        <a href="index.html">Home</a>
+        <a href="postulates.html">Postulates</a>
+        <a href="number-theory.html">Number Theory</a>
+        <a href="abstract.html">Abstract</a>
+        <a href="paper.html">Full Paper</a>
+        <a href="authors-note.html">Author’s Note</a>
+      </nav>
     </div>
     <hr class="rule" />
   </header>
@@ -72,55 +69,182 @@
 
       <div class="double-space" aria-hidden="true"></div>
 
-<div class="closing-quote" role="note" aria-label="Closing quote">
-  <p><em>Time has no beginning or end, there is only an in between.</em></p>
-</div>
+      <div class="closing-quote" role="note" aria-label="Closing quote">
+        <p><em>Time has no beginning or end, there is only an in between.</em></p>
+      </div>
 
-<!-- New: Intro + Key Findings -->
-<section class="home-intro" aria-label="Introduction and key findings">
+      <!-- Intro -->
+      <section class="home-intro" aria-label="Introduction">
+        <p class="home-purpose">
+          This site proposes a <strong>quantum-geometric foundation for existence</strong>:
+          a minimal construction in which <strong>linear extension</strong> and <strong>rotational curvature</strong>
+          meet at a symmetry-locked midpoint, and the large-scale behaviour of the cosmos emerges as a
+          <strong>time-symmetric cycle of expansion and renewal</strong>.
+          In this model, geometry is not merely the stage for physics—it is the generator of its constraints:
+          quantization, horizons, and the apparent “dark sector” arise as <em>geometric bookkeeping</em> across
+          a conserved, cyclic totality.
+        </p>
 
+        <!-- Key Equations -->
+        <section class="key-equations" aria-label="Key equations">
+          <h2>Key Equations</h2>
+          <p class="section-lede">
+            A small set of definitions and dynamical postulates anchor the framework. These are presented here as
+            orientation; derivations and context are developed in the full paper.
+          </p>
 
-  <p class="home-purpose">
-    This site proposes a <strong>quantum-geometric foundation for existence</strong>:
-    a minimal construction in which <strong>linear extension</strong> and <strong>rotational curvature</strong>
-    meet at a symmetry-locked midpoint, and the large-scale behaviour of the cosmos emerges as a
-    <strong>time-symmetric cycle of expansion and renewal</strong>.
-    In this model, geometry is not merely the stage for physics—it is the generator of its constraints:
-    quantization, horizons, and the apparent “dark sector” arise as <em>geometric bookkeeping</em> across
-    a conserved, cyclic totality.
-  </p>
+          <!-- Equation 1 -->
+          <article class="eq-item" aria-label="Equation: alpha seed">
+            <h3>Seed asymmetry</h3>
 
+            <p>
+              At emergence, an asymmetric geometric seed,
+            </p>
 
-</section>
+            <div class="equation" id="eq:alpha_seed">
+              \[
+                \alpha \equiv 1-\frac{\pi}{4},
+              \]
+            </div>
 
+            <p>
+              fixes boundary data for the initial partition of the cosmic energy budget within
+              a cube–circle construct.
+            </p>
+          </article>
 
+          <hr class="rule subtle" />
 
- <figure class="qgf-figure">
-  <img
-    src="quantum_geometric_framework.jpg"
-    alt="Quantum Geometric Framework: unit square with diagonals, quarter-circle arcs, and labels showing 1, 1/√2, and π/4."
-  />
-  <figcaption>
-    <strong>Figure 1. Quantum Geometric Framework.</strong>
-    A unit square (side length = 1) partitioned into four symmetric sectors defined by diagonal radii of
-    <span>1/√2</span> and quarter-circle arcs subtending angles of <span>π/4</span>. The construction highlights the intrinsic
-    relationship between <span>√2</span>—the diagonal scaling factor emerging from Euclidean symmetry—and <span>π</span>—the
-    measure governing rotational curvature. Their intersection within a normalized geometric field illustrates how linear
-    extension and circular curvature co-define structure. In this framework, the interplay between <span>√2</span> and
-    <span>π</span> is proposed as a foundational geometric tension from which spatial coherence, symmetry breaking, and
-    emergent physical order may be understood.
-  </figcaption>
-</figure>
+          <!-- Equation 2 -->
+          <article class="eq-item" aria-label="Equation: logistic evolution on branch-epoch">
+            <h3>Logistic branch evolution</h3>
 
+            <p>
+              We postulate a logistic evolution on the physical branch-epoch \(t\in[0,L]\),
+            </p>
+
+            <div class="equation" id="eq:logistic_f">
+              \[
+                f(t)=\frac{1}{1+\exp\!\big(-\kappa\,[t-\gamma]\big)},
+                \qquad t\in[0,L],
+              \]
+            </div>
+
+            <p>
+              where \(\kappa\) sets the steepness and \(\gamma\) is the midpoint time.
+            </p>
+          </article>
+
+          <hr class="rule subtle" />
+
+          <!-- Equation 3 -->
+          <article class="eq-item" aria-label="Equation: Viete-inspired beta factor">
+            <h3>Viète-inspired residual factor</h3>
+
+            <p>
+              The baryonic weight is fixed at emergence by \(\Omega_b=\pi/64\). To encode a
+              percent-level residual associated with bidirectional circle–square closure, we
+              introduce the dimensionless Viète-inspired factor
+            </p>
+
+            <div class="equation" id="eq:beta_viete">
+              \[
+                \beta_{\mathrm V} \equiv \frac{9\sqrt{2}}{4\pi}\simeq 1.01286,
+              \]
+            </div>
+
+            <p>
+              which parametrizes a small geometric imbalance between dual curvature projections.
+            </p>
+          </article>
+
+          <hr class="rule subtle" />
+
+          <!-- Equation 4 -->
+          <article class="eq-item" aria-label="Equation: midpoint equality condition">
+            <h3>Midpoint fixed by dark–sector equality</h3>
+
+            <p>
+              The temporal unfolding is encoded by the logistic law
+            </p>
+
+            <div class="equation" id="eq:logistic_f_framework">
+              \[
+                f(t)=\frac{1}{1+\exp\!\big(-\kappa\,[t-\gamma]\big)} ,
+              \]
+            </div>
+
+            <p>
+              where \(\kappa\) sets the steepness and \(\gamma\) is the midpoint time. The midpoint is fixed by
+              <em>dark–sector equality</em>:
+            </p>
+
+            <div class="equation" id="eq:equality_mid_framework">
+              \[
+                f(\gamma)=\frac12
+                \quad\Longleftrightarrow\quad
+                \Omega_{\rm dm}(\gamma)=\Omega_{\rm de}(\gamma)=\frac{S}{2}.
+              \]
+            </div>
+          </article>
+
+          <hr class="rule subtle" />
+
+          <!-- Equation 5 -->
+          <article class="eq-item" aria-label="Equation: Viete product">
+            <h3>Viète’s product and curvature refinement</h3>
+
+            <p>Viète’s formula,</p>
+
+            <div class="equation" id="eq:Viete_cosine">
+              \[
+                \frac{2}{\pi}
+                =
+                \prod_{n=1}^{\infty}
+                \cos\!\left(\frac{\pi}{2^{\,n+1}}\right),
+              \]
+            </div>
+
+            <p>
+              arises from repeated half–angle refinement of inscribed regular polygons. Each cosine may be viewed as a
+              curvature–projection factor that reduces the discrepancy between polygonal and circular geometry.
+            </p>
+          </article>
+
+          <p class="key-eq-links">
+            Continue reading: <a href="postulates.html">Postulates</a> ·
+            <a href="number-theory.html">Number Theory</a> ·
+            <a href="abstract.html">Abstract</a> ·
+            <a href="paper.html">Full Paper</a>
+          </p>
+        </section>
       </section>
 
-      <footer class="paper-footer" aria-label="Footer">
-        <hr class="rule subtle" />
-        <p class="footer-note">
-          © <span data-year></span> thegodequation.org — Presented in a classical “paper” layout for readability.
-        </p>
-      </footer>
-    </article>
+      <figure class="qgf-figure">
+        <img
+          src="quantum_geometric_framework.jpg"
+          alt="Quantum Geometric Framework: unit square with diagonals, quarter-circle arcs, and labels showing 1, 1/√2, and π/4."
+        />
+        <figcaption>
+          <strong>Quantum Geometric Framework.</strong>
+          A unit square (side length = 1) partitioned into four symmetric sectors defined by diagonal radii of
+          <span>1/√2</span> and quarter-circle arcs subtending angles of <span>π/4</span>. The construction highlights the intrinsic
+          relationship between <span>√2</span>—the diagonal scaling factor emerging from Euclidean symmetry—and <span>π</span>—the
+          measure governing rotational curvature. Their intersection within a normalized geometric field illustrates how linear
+          extension and circular curvature co-define structure. In this framework, the interplay between <span>√2</span> and
+          <span>π</span> is proposed as a foundational geometric tension from which spatial coherence, symmetry breaking, and
+          emergent physical order may be understood.
+        </figcaption>
+      </figure>
+
+    </section>
+
+    <footer class="paper-footer" aria-label="Footer">
+      <hr class="rule subtle" />
+      <p class="footer-note">
+        © <span data-year></span> thegodequation.org — Presented in a classical “paper” layout for readability.
+      </p>
+    </footer>
   </main>
 </body>
 </html>
