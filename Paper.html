@@ -67,6 +67,7 @@
   <a href="#sec-circle_square_gap">9. Geometry</a>
   <a href="#einstein-conservation">10. Einstein</a>
   <a href="#discussion-outlook">11. Discussion</a>
+  <a href="#app-mirror-pi">Appendix</a>
 </nav>
 
       </div>
@@ -2118,8 +2119,148 @@
   </p>
 </section>
 
+    <section id="app-mirror-pi" class="paper-section">
+  <h2 class="sec">Appendix A. Viète, Mirror Transforms, and Symbolic Duality</h2>
 
-          </article>
+  <h4 class="para">Disclaimer.</h4>
+  <p>
+    The constructions in this appendix are <em>interpretive</em> and primarily geometric in intent.
+    In particular, “mirror” operations on infinite products need not define new numerical constants
+    in any canonical way. For Viète's specific convergent product, the inverted partial products converge
+    to the reciprocal limit; nonetheless, we do <em>not</em> interpret this as introducing a distinct
+    “mirror value” of \(\pi\). Instead, the mirror language is used solely as bookkeeping intuition for
+    constructive versus canceling contributions in a two–branch, time–symmetric completion.
+  </p>
+
+  <h3 class="subsec" id="sec-viete-paradox">A.1. Viète’s Formula and Dual Closure in a Two–Branch Geometry</h3>
+
+  <p>
+    Viète’s classical infinite product for \(\pi\) may be written in nested–radical form
+    (<a href="bibliography.html#Vieta1593">Viète, 1593</a>)
+    as
+  </p>
+
+  <div class="equation" id="eq:Viete_original">
+    \[
+      \frac{2}{\pi}
+      =
+      \prod_{n=1}^{\infty}
+      \frac{\sqrt{2 + \sqrt{2 + \cdots + \sqrt{2}}}}{2},
+    \]
+  </div>
+
+  <p>
+    where the \(n\)th factor contains \(n\) nested square roots. Denoting the \(n\)th factor by \(a_n\),
+    one has \(0&lt;a_n&lt;1\) and \(a_n\to 1\) as \(n\to\infty\), so the product converges to \(2/\pi\).
+  </p>
+
+  <p>
+    Within the main text, the utility of this expression is structural: it provides a clean archetype in which
+    iterative curvature refinements approach a finite invariant without any single step “completing” the geometry.
+    This is the sense in which Viète’s product is invoked as an analogy for <em>constructive convergence</em>
+    in a single oriented domain.
+  </p>
+
+  <h3 class="subsec">A.2. Additive Closure versus Global Cancellation</h3>
+
+  <p>
+    A two–branch, time–reversal pairing motivates distinguishing between (i) a <em>local</em> notion of geometric
+    closure within a single oriented domain and (ii) a <em>global</em> cancellation between conjugate domains.
+    Symbolically, one may express a half–turn as the sum of two quarter–turn contributions,
+  </p>
+
+  <div class="equation" id="eq:pi_additive">
+    \[
+      \pi = \left(\frac{\pi}{2}\right) + \left(\frac{\pi}{2}\right),
+    \]
+  </div>
+
+  <p>
+    while a paired bookkeeping sum can be represented as cancellation between equal–magnitude,
+    opposite–orientation contributions,
+  </p>
+
+  <div class="equation" id="eq:pi_subtractive">
+    \[
+      0 = \left(\frac{\pi}{2}\right)_{\!+} - \left(\frac{\pi}{2}\right)_{\!-}.
+    \]
+  </div>
+
+  <p>
+    Equation \(\eqref{eq:pi_subtractive}\) is not an algebraic claim about \(\pi\); it is a compact way to indicate that,
+    in a conjugate pairing, the net contribution of two mirror halves can vanish even though each half is nonzero
+    within its own branch.
+  </p>
+
+  <h3 class="subsec">A.3. A Formal Mirror Transform</h3>
+
+  <p>
+    To make the “mirror” language explicit, introduce a formal transform acting on products by inversion of partial products:
+  </p>
+
+  <div class="equation" id="eq:mirror_transform">
+    \[
+      \mathcal{M}\!\left(\prod_{n=1}^{\infty} a_n\right)
+      \;\equiv\;
+      \prod_{n=1}^{\infty}\frac{1}{a_n},
+    \]
+  </div>
+
+  <p>
+    understood as the limit of inverted partial products. For the convergent Viète product, this inversion simply yields
+    the reciprocal limit. Using \(\eqref{eq:Viete_original}\),
+  </p>
+
+  <div class="equation" id="eq:pi_constructive">
+    \[
+      \prod_{n=1}^{\infty}\frac{1}{a_n}=\frac{\pi}{2},
+      \qquad\Rightarrow\qquad
+      \pi
+      =
+      2\prod_{n=1}^{\infty}\frac{1}{a_n}
+      =
+      2\prod_{n=1}^{\infty}
+      \frac{2}{\sqrt{2+\sqrt{2+\cdots}}},
+    \]
+  </div>
+
+  <p>
+    where the nested radical in the denominator is understood to depth \(n\) in the \(n\)th factor.
+  </p>
+
+  <h3 class="subsec">A.4. Mirror Pairing as Sign Reversal, Not a New Constant</h3>
+
+  <p>
+    In the two–branch interpretation used in the main text, the mirror sector is not assigned a different numerical value
+    of \(\pi\). Instead, mirror pairing is represented by a sign reversal in the <em>bookkeeping</em> of conjugate contributions.
+    Accordingly, an “annihilative” net is expressed as cancellation of equal contributions between the two branches,
+  </p>
+
+  <div class="equation" id="eq:pi_annihilative">
+    \[
+      \Pi_{\rm net}
+      \;\equiv\;
+      \left(\frac{\pi}{2}\right)_{\!+}
+      -
+      \left(\frac{\pi}{2}\right)_{\!-}
+      \;=\;
+      0,
+    \]
+  </div>
+
+  <p>
+    where \((+)\) and \((-)\) label conjugate orientations. The operational content is that global (two–branch) neutrality
+    can coexist with nonzero local geometry.
+  </p>
+
+  <p>
+    In summary, Viète’s product is used here as a structural metaphor: a convergent refinement scheme that supports the
+    distinction between single–branch closure (finite \(\pi\)) and two–branch cancellation (net zero) without introducing
+    any nonstandard analytic definition of \(\pi\).
+  </p>
+</section>
+
+ </article>
   </main>
 </body>
 </html>
