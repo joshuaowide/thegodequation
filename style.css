@@ -460,3 +460,43 @@ body{
   margin-top: 0.75rem;
 }
 
+.page-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+.authors-note h1,
+.about-author h2 {
+  margin-bottom: 30px;
+}
+
+.text-block p {
+  margin-bottom: 20px;
+}
+
+.author-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.author-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .author-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .author-photo {
+    max-width: 250px;
+  }
+}
+
+
