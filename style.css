@@ -501,3 +501,122 @@ body{
   }
 }
 
+/* =========================================================
+   HOMEPAGE INTRO + KEY FINDINGS (Classical Paper Styling)
+   ========================================================= */
+
+.home-intro {
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.home-title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 2.5rem 0 1.5rem 0;
+  letter-spacing: 0.02em;
+}
+
+.home-purpose,
+.home-reading {
+  margin-bottom: 1.4rem;
+  text-align: justify;
+}
+
+.home-subtitle {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1.2rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding-bottom: 0.4rem;
+}
+
+/* Grid collapses to single column but keeps elegant spacing */
+.findings-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.2rem;
+  margin-top: 1.8rem;
+}
+
+.finding h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.finding p {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+
+.finding-note {
+  font-size: 0.92rem;
+  opacity: 0.75;
+  font-style: italic;
+}
+
+/* Equation presentation */
+.equation-block {
+  text-align: center;
+  margin: 1.4rem 0;
+  font-size: 1.05rem;
+}
+
+/* Expandable equation section */
+.home-equations {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+}
+
+.home-equations summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.home-equations-note {
+  font-size: 0.92rem;
+  opacity: 0.75;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.home-links {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+/* Subtle refinement of horizontal rules inside intro */
+.home-intro .rule.subtle {
+  margin: 2.5rem auto;
+  opacity: 0.4;
+}
+
+/* Slightly tighter math rendering for elegance */
+mjx-container {
+  font-size: 1em !important;
+}
+
+/* Responsive adjustment */
+@media (max-width: 640px) {
+  .home-intro {
+    padding: 0 1rem;
+  }
+
+  .home-title {
+    font-size: 1.6rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+
