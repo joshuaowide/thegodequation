@@ -483,22 +483,29 @@ body{
   align-items: start;
 }
 
-.author-photo img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* About / Author photo */
+.author-photo{
+  max-width: 250px;       /* matches your grid column */
+  margin: 0;              /* keeps it aligned in the grid */
 }
 
-@media (max-width: 768px) {
-  .author-grid {
+.author-photo img {
+   width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;    /* match .figure img */
+  box-shadow: 0 10px 30px rgba(0,0,0,.10); /* match .figure img */
+  object-fit: cover;      /* prevents distortion if you later set a fixed height */
+}
+
+@media (max-width: 768px){
+  .author-grid{
     grid-template-columns: 1fr;
   }
 
-  .author-photo {
-    max-width: 800px;   /* Optional: controls overall figure size */
-  margin: 0 auto;     /* Centers the figure */
+  .author-photo{
+    max-width: 260px;     /* nice mobile size */
+    margin: 0 auto 1rem;  /* center the photo above the bio */
   }
 }
-
 
