@@ -7,6 +7,22 @@
    <!-- IMPORTANT: ensure style.css is in the same directory as paper.html -->
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" />
+
+    <!-- MathJax for LaTeX-style math -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],
+      },
+      options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- IMPORTANT: ensure script.js is in the same directory as paper.html -->
+  <script defer src="script.js"></script>
+  
 </head>
 
 <body>
