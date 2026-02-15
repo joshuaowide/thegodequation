@@ -442,4 +442,21 @@ body{
   border-bottom-color: var(--link);
 }
 
+.qgf-figure {
+  max-width: 800px;   /* Optional: controls overall figure size */
+  margin: 0 auto;     /* Centers the figure */
+}
+
+.qgf-figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.qgf-figure figcaption {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+}
 
