@@ -485,8 +485,9 @@ body{
 
 .author-photo img {
   width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  display: block;
 }
 
 @media (max-width: 768px) {
@@ -495,7 +496,8 @@ body{
   }
 
   .author-photo {
-    max-width: 250px;
+    max-width: 800px;   /* Optional: controls overall figure size */
+  margin: 0 auto;     /* Centers the figure */
   }
 }
 
